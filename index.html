@@ -5,262 +5,295 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tungku Studio — Keramik &amp; Homeware Buatan Tangan</title>
 <meta name="description" content="Tungku Studio membuat keramik dan homeware dari tanah liat lokal, dibentuk dan dibakar tangan oleh pengrajin di Bandung.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar-custom" id="progressBar"></div>
 
-<header class="site-header" id="siteHeader">
-  <div class="wrap header-inner">
-    <a href="#top" class="logo">Tungku<span class="logo-dot">.</span></a>
-    <nav class="main-nav" id="mainNav">
-      <a href="#cerita">Cerita</a>
-      <a href="#koleksi">Koleksi</a>
-      <a href="#proses">Proses</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-ink sticky-top">
+  <div class="container">
+    <a class="navbar-brand logo" href="#top">Tungku<span class="logo-dot">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="#cerita">Cerita</a></li>
+        <li class="nav-item"><a class="nav-link" href="#koleksi">Koleksi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proses">Proses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
   </div>
-</header>
+</nav>
 
 <main id="top">
 
-  <section class="hero" id="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Sejak 2014, Bandung</p>
-        <h1 class="hero-title">
-          Tanah liat yang<br>dibentuk jadi bagian<br>dari meja makanmu.
-        </h1>
-        <p class="hero-sub">
-          Kami merancang dan membakar sendiri setiap piring, mangkuk, dan vas — satu per satu, tanpa cetakan massal. Retak kecil dan warna yang tak pernah sama persis itu bagian dari cara kami membuat.
-        </p>
-        <div class="hero-actions">
-          <a href="#koleksi" class="btn btn-clay">Lihat koleksi</a>
-          <a href="#cerita" class="btn btn-ghost">Baca cerita kami</a>
+  <section class="bg-ink text-cream py-5 py-lg-6" id="hero">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="eyebrow mb-3">Sejak 2014, Bandung</p>
+          <h1 class="hero-title mb-4">Tanah liat yang dibentuk jadi bagian dari meja makanmu.</h1>
+          <p class="text-cream-dim mb-4 col-lg-10">
+            Kami merancang dan membakar sendiri setiap piring, mangkuk, dan vas — satu per satu, tanpa cetakan massal. Retak kecil dan warna yang tak pernah sama persis itu bagian dari cara kami membuat.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#koleksi" class="btn btn-clay btn-lg">Lihat koleksi</a>
+            <a href="#cerita" class="btn btn-outline-cream btn-lg">Baca cerita kami</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 360 460" class="vessel-svg" id="heroVessel">
-          <ellipse cx="180" cy="430" rx="90" ry="14" class="vessel-shadow"/>
-          <path class="vessel-path" d="M 130 60
-            C 118 100, 108 150, 112 200
-            C 116 260, 138 300, 130 340
-            C 124 372, 140 400, 180 402
-            C 220 400, 236 372, 230 340
-            C 222 300, 244 260, 248 200
-            C 252 150, 242 100, 230 60
-            C 220 46, 140 46, 130 60 Z"/>
-          <path class="vessel-rim" d="M 128 60 C 140 68, 220 68, 232 60"/>
-          <path class="vessel-glaze-drip" d="M 150 90 C 148 140, 156 190, 150 230 C 146 258, 158 270, 156 290"/>
-        </svg>
-        <span class="hero-tag hero-tag--1">stoneware</span>
-        <span class="hero-tag hero-tag--2">dibakar 1250°C</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="story" id="cerita">
-    <div class="wrap story-grid">
-      <div class="story-quote">
-        <svg viewBox="0 0 60 60" class="quote-mark" aria-hidden="true"><path d="M22 12C13 15 8 23 8 32c0 6 4 10 10 10s10-4 10-10c0-5-3-8-7-9 1-6 6-9 11-10zM48 12c-9 3-14 11-14 20 0 6 4 10 10 10s10-4 10-10c0-5-3-8-7-9 1-6 6-9 11-10z" fill="currentColor"/></svg>
-        <p>Kami tidak mengejar bentuk yang sempurna. Kami mengejar bentuk yang jujur soal bagaimana ia dibuat.</p>
-        <span class="story-quote-attr">— Rania, pendiri &amp; pembentuk utama</span>
-      </div>
-      <div class="story-text">
-        <p class="story-eyebrow">Cerita kami</p>
-        <h2>Dari satu roda putar di garasi, sampai ke dapur ratusan rumah.</h2>
-        <p>Tungku Studio dimulai tahun 2014 dari satu roda putar di garasi rumah Rania di Bandung. Awalnya cuma bikin mangkuk untuk dipakai sendiri — sampai tetangga mulai minta dibuatkan set makan.</p>
-        <p>Sekarang kami bekerja dengan enam pengrajin, satu kiln gas, dan tanah liat yang kami ambil sendiri dari Sukabumi. Setiap batch dibakar maksimal 40 buah, jadi kami selalu tahu persis siapa yang membentuk apa.</p>
-        <div class="story-stats">
-          <div class="stat"><span class="stat-num">6</span><span class="stat-label">pengrajin tetap</span></div>
-          <div class="stat"><span class="stat-num">40</span><span class="stat-label">buah per batch kiln</span></div>
-          <div class="stat"><span class="stat-num">11</span><span class="stat-label">tahun berjalan</span></div>
+        <div class="col-lg-5 text-center position-relative">
+          <svg viewBox="0 0 360 460" class="vessel-svg" id="heroVessel" aria-hidden="true">
+            <ellipse cx="180" cy="430" rx="90" ry="14" class="vessel-shadow"/>
+            <path class="vessel-path" d="M 130 60
+              C 118 100, 108 150, 112 200
+              C 116 260, 138 300, 130 340
+              C 124 372, 140 400, 180 402
+              C 220 400, 236 372, 230 340
+              C 222 300, 244 260, 248 200
+              C 252 150, 242 100, 230 60
+              C 220 46, 140 46, 130 60 Z"/>
+            <path class="vessel-rim" d="M 128 60 C 140 68, 220 68, 232 60"/>
+            <path class="vessel-glaze-drip" d="M 150 90 C 148 140, 156 190, 150 230 C 146 258, 158 270, 156 290"/>
+          </svg>
+          <span class="badge-pill badge-pill--1">stoneware</span>
+          <span class="badge-pill badge-pill--2">dibakar 1250°C</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="collection" id="koleksi">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow">Koleksi</p>
-        <h2>Barang yang kami buat paling banyak</h2>
+  <section class="bg-paper py-5 py-lg-6" id="cerita">
+    <div class="container py-4">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <svg viewBox="0 0 60 60" class="quote-mark mb-3" aria-hidden="true"><path d="M22 12C13 15 8 23 8 32c0 6 4 10 10 10s10-4 10-10c0-5-3-8-7-9 1-6 6-9 11-10zM48 12c-9 3-14 11-14 20 0 6 4 10 10 10s10-4 10-10c0-5-3-8-7-9 1-6 6-9 11-10z" fill="currentColor"/></svg>
+          <p class="story-quote">Kami tidak mengejar bentuk yang sempurna. Kami mengejar bentuk yang jujur soal bagaimana ia dibuat.</p>
+          <span class="text-ink-dim small">— Rania, pendiri &amp; pembentuk utama</span>
+        </div>
+        <div class="col-lg-7">
+          <p class="eyebrow eyebrow--clay-dark mb-3">Cerita kami</p>
+          <h2 class="section-title mb-4 col-xl-9">Dari satu roda putar di garasi, sampai ke dapur ratusan rumah.</h2>
+          <p class="text-ink-dim col-xl-10">Tungku Studio dimulai tahun 2014 dari satu roda putar di garasi rumah Rania di Bandung. Awalnya cuma bikin mangkuk untuk dipakai sendiri — sampai tetangga mulai minta dibuatkan set makan.</p>
+          <p class="text-ink-dim col-xl-10">Sekarang kami bekerja dengan enam pengrajin, satu kiln gas, dan tanah liat yang kami ambil sendiri dari Sukabumi. Setiap batch dibakar maksimal 40 buah, jadi kami selalu tahu persis siapa yang membentuk apa.</p>
+          <div class="row mt-4 pt-4 border-top">
+            <div class="col-4">
+              <span class="stat-num d-block">6</span>
+              <span class="stat-label">pengrajin tetap</span>
+            </div>
+            <div class="col-4">
+              <span class="stat-num d-block">40</span>
+              <span class="stat-label">buah per batch kiln</span>
+            </div>
+            <div class="col-4">
+              <span class="stat-num d-block">11</span>
+              <span class="stat-label">tahun berjalan</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="collection-grid">
+    </div>
+  </section>
 
-        <article class="product product--wide">
-          <svg viewBox="0 0 200 140" class="product-svg" aria-hidden="true">
+  <section class="bg-ink text-cream py-5 py-lg-6" id="koleksi">
+    <div class="container py-4">
+      <div class="col-lg-7 mb-5">
+        <p class="eyebrow mb-3">Koleksi</p>
+        <h2 class="section-title text-cream">Barang yang kami buat paling banyak</h2>
+      </div>
+      <div class="row g-0 border-top border-start product-grid">
+
+        <div class="col-md-8 col-lg-6 border-end border-bottom p-4 p-lg-5 d-flex align-items-center gap-4 product-cell">
+          <svg viewBox="0 0 200 140" class="product-svg product-svg--wide flex-shrink-0" aria-hidden="true">
             <ellipse cx="100" cy="120" rx="70" ry="10" class="product-shadow"/>
             <path class="product-path" d="M40 60 C40 45 60 35 100 35 C140 35 160 45 160 60 L155 100 C150 115 60 115 45 100 Z"/>
             <path class="product-rim" d="M40 60 C55 68 145 68 160 60"/>
           </svg>
-          <div class="product-info">
-            <h3>Set Piring Sarapan</h3>
-            <p>Empat piring, glasir sage, diameter 22cm.</p>
+          <div>
+            <h3 class="product-title">Set Piring Sarapan</h3>
+            <p class="text-cream-dim small mb-2">Empat piring, glasir sage, diameter 22cm.</p>
             <span class="product-price">Rp 420.000</span>
           </div>
-        </article>
+        </div>
 
-        <article class="product">
-          <svg viewBox="0 0 140 200" class="product-svg" aria-hidden="true">
+        <div class="col-md-4 col-lg-3 border-end border-bottom p-4 p-lg-5 product-cell">
+          <svg viewBox="0 0 140 200" class="product-svg mx-auto" aria-hidden="true">
             <ellipse cx="70" cy="188" rx="45" ry="8" class="product-shadow"/>
             <path class="product-path" d="M50 30 C44 60 40 100 44 140 C46 165 60 178 70 178 C80 178 94 165 96 140 C100 100 96 60 90 30 C82 20 58 20 50 30 Z"/>
             <path class="product-rim" d="M50 30 C58 36 82 36 90 30"/>
           </svg>
-          <div class="product-info">
-            <h3>Vas Leher Panjang</h3>
-            <p>Glasir rustik, tinggi 28cm.</p>
-            <span class="product-price">Rp 265.000</span>
-          </div>
-        </article>
+          <h3 class="product-title">Vas Leher Panjang</h3>
+          <p class="text-cream-dim small mb-2">Glasir rustik, tinggi 28cm.</p>
+          <span class="product-price">Rp 265.000</span>
+        </div>
 
-        <article class="product">
-          <svg viewBox="0 0 160 140" class="product-svg" aria-hidden="true">
+        <div class="col-md-4 col-lg-3 border-end border-bottom p-4 p-lg-5 product-cell">
+          <svg viewBox="0 0 160 140" class="product-svg mx-auto" aria-hidden="true">
             <ellipse cx="80" cy="122" rx="55" ry="8" class="product-shadow"/>
             <path class="product-path" d="M30 60 C30 42 55 30 80 30 C105 30 130 42 130 60 L124 105 C118 122 42 122 36 105 Z"/>
             <path class="product-rim" d="M30 60 C48 70 112 70 130 60"/>
             <path class="product-handle" d="M128 65 C150 65 150 95 128 95"/>
           </svg>
-          <div class="product-info">
-            <h3>Mangkuk Sup Bertangkai</h3>
-            <p>Kapasitas 500ml, glasir clay.</p>
-            <span class="product-price">Rp 145.000</span>
-          </div>
-        </article>
+          <h3 class="product-title">Mangkuk Sup Bertangkai</h3>
+          <p class="text-cream-dim small mb-2">Kapasitas 500ml, glasir clay.</p>
+          <span class="product-price">Rp 145.000</span>
+        </div>
 
-        <article class="product">
-          <svg viewBox="0 0 150 150" class="product-svg" aria-hidden="true">
+        <div class="col-md-4 col-lg-3 border-end border-bottom p-4 p-lg-5 product-cell">
+          <svg viewBox="0 0 150 150" class="product-svg mx-auto" aria-hidden="true">
             <ellipse cx="75" cy="132" rx="48" ry="8" class="product-shadow"/>
             <path class="product-path" d="M45 40 C40 65 38 95 44 118 C48 130 100 130 104 118 C110 95 108 65 103 40 C92 30 56 30 45 40 Z"/>
             <path class="product-rim" d="M45 40 C58 48 90 48 103 40"/>
           </svg>
-          <div class="product-info">
-            <h3>Toples Bumbu</h3>
-            <p>Dengan tutup kayu, 600ml.</p>
-            <span class="product-price">Rp 180.000</span>
-          </div>
-        </article>
+          <h3 class="product-title">Toples Bumbu</h3>
+          <p class="text-cream-dim small mb-2">Dengan tutup kayu, 600ml.</p>
+          <span class="product-price">Rp 180.000</span>
+        </div>
 
-        <article class="product">
-          <svg viewBox="0 0 200 130" class="product-svg" aria-hidden="true">
+        <div class="col-md-4 col-lg-3 border-end border-bottom p-4 p-lg-5 product-cell">
+          <svg viewBox="0 0 200 130" class="product-svg mx-auto" aria-hidden="true">
             <ellipse cx="100" cy="112" rx="72" ry="9" class="product-shadow"/>
             <path class="product-path" d="M35 55 C35 40 60 30 100 30 C140 30 165 40 165 55 L158 95 C150 112 50 112 42 95 Z"/>
             <path class="product-rim" d="M35 55 C55 64 145 64 165 55"/>
           </svg>
-          <div class="product-info">
-            <h3>Nampan Sajian Oval</h3>
-            <p>Panjang 34cm, glasir dua warna.</p>
-            <span class="product-price">Rp 310.000</span>
-          </div>
-        </article>
+          <h3 class="product-title">Nampan Sajian Oval</h3>
+          <p class="text-cream-dim small mb-2">Panjang 34cm, glasir dua warna.</p>
+          <span class="product-price">Rp 310.000</span>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <section class="process" id="proses">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow">Proses</p>
-        <h2>Dari tanah liat mentah sampai siap dikirim</h2>
+  <section class="bg-paper py-5 py-lg-6" id="proses">
+    <div class="container py-4">
+      <div class="col-lg-7 mb-5">
+        <p class="eyebrow eyebrow--clay-dark mb-3">Proses</p>
+        <h2 class="section-title">Dari tanah liat mentah sampai siap dikirim</h2>
       </div>
-      <ol class="process-list">
-        <li class="process-step">
+      <div class="row g-4 process-row">
+        <div class="col-6 col-lg-3">
           <span class="process-num">01</span>
-          <h3>Pilih dan uleni tanah liat</h3>
-          <p>Tanah liat dari Sukabumi disaring dan diuleni manual untuk membuang gelembung udara.</p>
-        </li>
-        <li class="process-step">
+          <h3 class="process-title">Pilih dan uleni tanah liat</h3>
+          <p class="text-ink-dim small">Tanah liat dari Sukabumi disaring dan diuleni manual untuk membuang gelembung udara.</p>
+        </div>
+        <div class="col-6 col-lg-3">
           <span class="process-num">02</span>
-          <h3>Bentuk di roda putar</h3>
-          <p>Setiap potongan dibentuk tangan di roda putar kayu, tidak ada dua yang identik.</p>
-        </li>
-        <li class="process-step">
+          <h3 class="process-title">Bentuk di roda putar</h3>
+          <p class="text-ink-dim small">Setiap potongan dibentuk tangan di roda putar kayu, tidak ada dua yang identik.</p>
+        </div>
+        <div class="col-6 col-lg-3">
           <span class="process-num">03</span>
-          <h3>Bakar bisque, lalu glasir</h3>
-          <p>Dibakar dulu tanpa glasir di 900°C, lalu dilapis glasir dan dibakar ulang di 1250°C.</p>
-        </li>
-        <li class="process-step">
+          <h3 class="process-title">Bakar bisque, lalu glasir</h3>
+          <p class="text-ink-dim small">Dibakar dulu tanpa glasir di 900°C, lalu dilapis glasir dan dibakar ulang di 1250°C.</p>
+        </div>
+        <div class="col-6 col-lg-3">
           <span class="process-num">04</span>
-          <h3>Periksa dan kemas</h3>
-          <p>Setiap barang diperiksa retak dan cacat sebelum dibungkus kertas dan dikirim.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="wrap testimonials-grid">
-      <blockquote class="testimonial">
-        <p>Piring dari Tungku itu berat di tangan dengan cara yang enak. Bukan berat yang salah, tapi berat yang bikin tahu ini dibuat serius.</p>
-        Dewi A. — pembeli sejak 2019
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>Saya pesan set untuk restoran kecil saya, dan tiap piring memang sedikit berbeda. Tamu malah suka, katanya kelihatan bukan barang pabrik.</p>
-        Restoran Ujung Meja
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>Vas leher panjangnya jadi barang yang paling sering ditanya orang kalau main ke rumah saya.</p>
-        Bimo S. — pembeli sejak 2022
-      </blockquote>
-    </div>
-  </section>
-
-  <section class="contact" id="kontak">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <p class="section-eyebrow">Kontak</p>
-        <h2>Mau pesan custom atau tanya-tanya dulu?</h2>
-        <p class="contact-desc">Studio kami buka untuk kunjungan tiap Sabtu, atau kirim pesan lewat form ini dan kami balas dalam 1–2 hari kerja.</p>
-        <dl class="contact-details">
-          <div><dt>Alamat</dt><dd>Jl. Kiaracondong No. 88, Bandung</dd></div>
-          <div><dt>Email</dt><dd>halo@tungkustudio.id</dd></div>
-          <div><dt>Telepon</dt><dd>+62 812 3456 7890</dd></div>
-        </dl>
+          <h3 class="process-title">Periksa dan kemas</h3>
+          <p class="text-ink-dim small">Setiap barang diperiksa retak dan cacat sebelum dibungkus kertas dan dikirim.</p>
+        </div>
       </div>
-      <form class="contact-form" id="contactForm" novalidate>
-        <div class="field">
-          <label for="name">Nama</label>
-          <input type="text" id="name" name="name" placeholder="Nama lengkap kamu">
-          <span class="field-error" id="nameError"></span>
+    </div>
+  </section>
+
+  <section class="bg-paper-soft py-5 py-lg-6">
+    <div class="container py-4">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <blockquote class="testimonial">
+            <p>Piring dari Tungku itu berat di tangan dengan cara yang enak. Bukan berat yang salah, tapi berat yang bikin tahu ini dibuat serius.</p>
+            <cite>Dewi A. — pembeli sejak 2019</cite>
+          </blockquote>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="nama@email.com">
-          <span class="field-error" id="emailError"></span>
+        <div class="col-md-4">
+          <blockquote class="testimonial">
+            <p>Saya pesan set untuk restoran kecil saya, dan tiap piring memang sedikit berbeda. Tamu malah suka, katanya kelihatan bukan barang pabrik.</p>
+            <cite>Restoran Ujung Meja</cite>
+          </blockquote>
         </div>
-        <div class="field">
-          <label for="message">Pesan</label>
-          <textarea id="message" name="message" rows="4" placeholder="Ceritakan apa yang kamu cari"></textarea>
-          <span class="field-error" id="messageError"></span>
+        <div class="col-md-4">
+          <blockquote class="testimonial">
+            <p>Vas leher panjangnya jadi barang yang paling sering ditanya orang kalau main ke rumah saya.</p>
+            <cite>Bimo S. — pembeli sejak 2022</cite>
+          </blockquote>
         </div>
-        <button type="submit" class="btn btn-clay btn-block">Kirim pesan</button>
-        <p class="form-success" id="formSuccess" role="status"></p>
-      </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-paper py-5 py-lg-6" id="kontak">
+    <div class="container py-4">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <p class="eyebrow eyebrow--clay-dark mb-3">Kontak</p>
+          <h2 class="section-title mb-3">Mau pesan custom atau tanya-tanya dulu?</h2>
+          <p class="text-ink-dim">Studio kami buka untuk kunjungan tiap Sabtu, atau kirim pesan lewat form ini dan kami balas dalam 1–2 hari kerja.</p>
+          <dl class="contact-details mt-4">
+            <div class="py-3 border-top d-flex justify-content-between">
+              <dt class="text-ink-dim small">Alamat</dt>
+              <dd class="mb-0 fw-medium text-end">Jl. Kiaracondong No. 88, Bandung</dd>
+            </div>
+            <div class="py-3 border-top d-flex justify-content-between">
+              <dt class="text-ink-dim small">Email</dt>
+              <dd class="mb-0 fw-medium">halo@tungkustudio.id</dd>
+            </div>
+            <div class="py-3 border-top d-flex justify-content-between">
+              <dt class="text-ink-dim small">Telepon</dt>
+              <dd class="mb-0 fw-medium">+62 812 3456 7890</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="col-lg-7">
+          <form class="needs-validation row g-3" id="contactForm" novalidate>
+            <div class="col-12">
+              <label for="name" class="form-label">Nama</label>
+              <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Nama lengkap kamu" required minlength="2">
+              <div class="invalid-feedback">Masukkan nama kamu.</div>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="nama@email.com" required>
+              <div class="invalid-feedback">Masukkan email yang valid.</div>
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea class="form-control form-control-lg" id="message" name="message" rows="4" placeholder="Ceritakan apa yang kamu cari" required minlength="10"></textarea>
+              <div class="invalid-feedback">Ceritakan sedikit lebih lengkap (min. 10 karakter).</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-clay btn-lg w-100">Kirim pesan</button>
+              <p class="form-success mt-3 mb-0" id="formSuccess" role="status"></p>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <a href="#top" class="logo logo--footer">Tungku<span class="logo-dot">.</span></a>
-    <p>&copy; <span id="year"></span> Tungku Studio. Dibuat dengan tangan di Bandung.</p>
-    <div class="footer-links">
-      <a href="#koleksi">Koleksi</a>
-      <a href="#proses">Proses</a>
-      <a href="#kontak">Kontak</a>
+<footer class="bg-ink text-cream-dim py-4">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <a href="#top" class="logo text-cream">Tungku<span class="logo-dot">.</span></a>
+    <p class="mb-0 small">&copy; <span id="year"></span> Tungku Studio. Dibuat dengan tangan di Bandung.</p>
+    <div class="d-flex gap-4">
+      <a href="#koleksi" class="text-cream-dim small">Koleksi</a>
+      <a href="#proses" class="text-cream-dim small">Proses</a>
+      <a href="#kontak" class="text-cream-dim small">Kontak</a>
     </div>
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
